@@ -154,7 +154,7 @@ class Namespace {
         const enums = this.enums.map(e => {
             localTypes[e.name] = 'enum';
             return {
-                name: e.name,
+                name: camelCaseName(e.name),
                 values: e.values,
                 valueList: e.values.map(value => value.id).join('|')
             };
@@ -168,13 +168,13 @@ class Namespace {
             localTypes[message.name] = 'message';
             const typeCache = {};
             return {
-                name: message.name,
+                name: camelCaseName(message.name),
                 fields: message.fields.map(field => {
                     const fieldTypes = Namespace.getNamespace(fqMessageName)
                         .resolveType(field.type, localTypes, imports, field.rule === 'repeated');
                     typeCache[field.id] = fieldTypes;
                     return {
-                        name: field.name,
+                        name: camelCaseName(field.name),
                         upperName: camelCase(field.name, true),
                         type: fieldTypes,
                         optional: field.rule === 'optional',
@@ -182,7 +182,7 @@ class Namespace {
                     };
                 }),
                 oneOfs: Object.keys(message.oneofs).map(name => new Object({
-                    'name': name,
+                    'name': camelCaseName(name),
                     'typeName': message.name + '$' + name,
                     'fieldTypes': message.oneofs[name]
                         .map(value => typeCache[value].builder)
@@ -437,7 +437,7 @@ function clean(code) {
 }
 
 /**
- * Converts foo_bar -> fooBar
+ * Converts foo_bar -> FooBar
  * @param str
  * @param next
  * @returns {string}
@@ -454,6 +454,20 @@ function camelCase(str, next) {
     }
     return output;
 }
+
+const camelCaseRe = /_([a-z])/g;
+
+/**
+ * Converts a string to foo_bar to fooBar camel case.
+ * @param {string} str String to convert
+ * @returns {string} Converted string
+ */
+function camelCaseName(str) {
+    return str.substring(0, 1)
+        + str.substring(1).replace(camelCaseRe, function($0, $1) {
+            return $1.toUpperCase();
+        });
+};
 
 
 /**

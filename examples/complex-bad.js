@@ -1,42 +1,44 @@
-import {Test1, Test2, Test3} from './complex/com/example/test';
+import type {Test1Interface, Test2Interface, Test3Interface} from './complex/com/example/test';
 
-import {Container, Result, Generic} from './complex/com';
+import {Result, type ContainerInterface,type GenericInterface} from './complex/com';
 
-import {Module1Test} from './complex/com/foobar/module1';
+import type {Module1TestInterface} from './complex/com/foobar/module1';
 
-import {Generic as Module2Generic} from './complex/com/example/module2';
+import type {GenericInterface as Module2Generic} from './complex/com/example/module2';
 
-import {SubMessage} from './complex/com/foobar/module1/Module1Test';
+import type {SubMessageInterface} from './complex/com/foobar/module1/Module1Test';
 
-const test1 = new Test1({
-    value: new Container({
+const UNKNOWN = 10000;
+
+const test1:Test1Interface = {
+    value: {
         doubleValue: '1.4'
-    }),
-    result: Result.UNKNOWN
-});
+    },
+    result: UNKNOWN
+};
 
-const subMessage = new SubMessage({
-    my_sub_data: true
-});
+const subMessage:SubMessageInterface = {
+    mySubData: true
+};
 
-const test2 = new Test2({
-    module1_test: new Module1Test({
-        my_data1: {},
-        my_data2: 124,
-        my_sub_msg: 'test'
-    }),
-    module1_sub_test: subMessage
-});
+const test2:Test2Interface = {
+    module1Test: {
+        myData1: {},
+        myData2: 124,
+        mySubMsg: 'test'
+    },
+    module1SubTest: subMessage
+};
 
-const mod2Generic = new Module2Generic({
-    another_test: '5'
-});
+const mod2Generic:Module2Generic = {
+    anotherTest: '5'
+};
 
-const test3 = new Test3({
-    base_generic: new Generic({
+const test3:Test3Interface = {
+    baseGeneric: {
         test: 123
-    }),
-    module2_generic1: [mod2Generic],
-    module2_generic2: null,
-    module2_generic3: {}
-});
+    },
+    module2Generic1: [mod2Generic],
+    module2Generic2: null,
+    module2Generic3: {}
+};

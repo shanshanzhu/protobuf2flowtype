@@ -1,17 +1,8 @@
 // @flow
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-/*:: #*/
-import {builder} from '../index';
-export {builder};
-/*$ */
-
 const _ = require('../index');
 
-exports.builder = _.builder;
+export const builder = _.builder;
 
 {{#package}}
 
@@ -109,22 +100,11 @@ exports.builder = _.builder;
 /*$ */
 
     const namespace /*: {{dollar}} */ = _.builder.build('{{dots}}');
-
-    {{#messages}}
-        exports.{{name}} = namespace.{{name}};
-/*:: #*/
-        export const {{name}} = namespace.{{name}};
-/*$ */
-    {{/messages}}
-
     {{#enums}}
-        exports.{{name}} = namespace.{{name}};
 /*:: #*/
         export const {{name}} = namespace.{{name}};
 /*$ */
     {{/enums}}
-
-    exports.default = namespace;
 /*:: #*/
     export default namespace;
 /*$ */

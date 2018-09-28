@@ -1,12 +1,10 @@
-import {Chat, Greeting, GreetingType} from './simple/foo';
+import {GreetingType, type ChatInterface, type GreetingInterface} from './simple/foo';
 
-
-const chat = new Chat({
-    greeting: new Greeting({
-        type: GreetingType.WAVE,
+const UNKNOWN = 1000;
+const chat:ChatInterface = {
+    greeting: {
+        type: UNKNOWN,
         text: 123
-    }),
+    },
     body: true
-});
-
-console.log(chat);
+};
