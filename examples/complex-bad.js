@@ -1,6 +1,6 @@
 import type {Test1Interface, Test2Interface, Test3Interface} from './complex/com/example/test';
 
-import {Result, type ContainerInterface,type GenericInterface} from './complex/com';
+import type {ContainerInterface, GenericInterface} from './complex/com';
 
 import type {Module1TestInterface} from './complex/com/foobar/module1';
 

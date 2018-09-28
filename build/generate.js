@@ -568,6 +568,10 @@ function generateFromProto(outputDir, inputProto, protoDir) {
     );
 
     for (const key of Object.keys(code)) {
+        // Do not write the file if it is an empty placeholder for index.js
+        if (code[key] === '' || code[key] === '// @flow') {
+            continue;
+        }
         const dir = path.format({
             dir: outputDir,
             base: key
@@ -577,6 +581,7 @@ function generateFromProto(outputDir, inputProto, protoDir) {
             dir: dir,
             base: 'index.js'
         });
+        // do not need to write index.js file
         fs.writeFileSync(file, code[key], {encoding: 'utf8'});
     }
 

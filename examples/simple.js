@@ -1,11 +1,13 @@
 /* @flow */
 
-import {GreetingType, type ChatInterface, type GreetingInterface} from './simple/foo';
+import type {ChatInterface, GreetingInterface} from './simple/foo';
 
+
+const HELLO = 0;
 
 const chat:ChatInterface = {
     greeting: {
-        type: GreetingType.HELLO,
+        type: HELLO,
         text: 'Hi'
     },
     body: 'How are you?'

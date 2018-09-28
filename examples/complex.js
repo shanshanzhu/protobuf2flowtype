@@ -2,7 +2,7 @@
 
 import type {Test1Interface, Test2Interface, Test3Interface} from './complex/com/example/test';
 
-import {Result, type ContainerInterface,type GenericInterface} from './complex/com';
+import type {ContainerInterface, GenericInterface} from './complex/com';
 
 import type {Module1TestInterface} from './complex/com/foobar/module1';
 
@@ -11,11 +11,13 @@ import type {GenericInterface as Module2Generic} from './complex/com/example/mod
 import type {SubMessageInterface} from './complex/com/foobar/module1/Module1Test';
 
 
+const SUCCESS = 0;
+
 const test1:Test1Interface = {
     value: {
         doubleValue: 1.4
     },
-    result: Result.SUCCESS
+    result: SUCCESS
 };
 
 const subMessage:SubMessageInterface = {

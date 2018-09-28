@@ -1,8 +1,5 @@
 // @flow
 
-const _ = require('../index');
-
-export const builder = _.builder;
 
 {{#package}}
 
@@ -99,13 +96,4 @@ export const builder = _.builder;
 
 /*$ */
 
-    const namespace /*: {{dollar}} */ = _.builder.build('{{dots}}');
-    {{#enums}}
-/*:: #*/
-        export const {{name}} = namespace.{{name}};
-/*$ */
-    {{/enums}}
-/*:: #*/
-    export default namespace;
-/*$ */
 {{/package}}
