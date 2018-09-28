@@ -1,3 +1,5 @@
+# This is the forked branch from https://github.com/netproteus/protobuf2flowtype
+
 [![npm version](https://badge.fury.io/js/protobuf2flowtype.svg)](https://badge.fury.io/js/protobuf2flowtype) [![CircleCI](https://circleci.com/gh/netproteus/protobuf2flowtype.svg?style=svg)](https://circleci.com/gh/netproteus/protobuf2flowtype) [![codecov](https://codecov.io/gh/netproteus/protobuf2flowtype/branch/master/graph/badge.svg)](https://codecov.io/gh/netproteus/protobuf2flowtype)
 
 # protobuf2flowtype
