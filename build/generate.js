@@ -2,8 +2,8 @@ const ProtoBuf = require('protobufjs');
 const fs = require('fs-extra');
 const path = require('path');
 const mustache = require('mustache');
-const babylon = require('babylon');
-const generate = require('babel-generator').default;
+const babylon = require('@babel/parser');
+const generate = require('@babel/generator').default;
 
 /**
  * Directory to load templates from
