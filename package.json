@@ -12,8 +12,7 @@
     "fs-extra": "^2.0.0",
     "mustache": "^2.2.1",
     "protobuf2flowtype-typeonly-runtime": "1.1.4",
-    "yargs": "^7.0.2",
-    "protobuf2flowtype-runtime": "1.1.5"
+    "yargs": "^7.0.2"
   },
   "devDependencies": {
     "babel-eslint": "^7.0.0",
