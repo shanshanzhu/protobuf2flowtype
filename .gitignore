@@ -6,3 +6,4 @@ coverage
 examples/**/*.js
 !examples/*.js
 !examples/**/*.proto
+yarn-error.log
