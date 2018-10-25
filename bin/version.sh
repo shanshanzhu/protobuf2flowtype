@@ -14,4 +14,4 @@ git add package.json
 
 cd ..
 
-node_modules/.bin/json -I -f package.json -e "this.dependencies[\"protobuf2flowtype-typeonly-runtime\"] = \"${NEW_VERSION}\""
+node_modules/.bin/json -I -f package.json -e "this.dependencies[\"protobuf2flowtype-typetool-runtime\"] = \"${NEW_VERSION}\""

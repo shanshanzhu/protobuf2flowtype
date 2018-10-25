@@ -5,9 +5,9 @@
 
 /*:: #*/
 
-    import {Protobuf$Message} from 'protobuf2flowtype-typeonly-runtime';
+    import {Protobuf$Message} from 'protobuf2flowtype-typetool-runtime';
 
-    import type {ByteBuffer, ProtoBuf$Builder, ProtoBuf$MessageLiteral, Protobuf$RefectType} from 'protobuf2flowtype-typeonly-runtime';
+    import type {ByteBuffer, ProtoBuf$Builder, ProtoBuf$MessageLiteral, Protobuf$RefectType} from 'protobuf2flowtype-typetool-runtime';
 
     {{#imports}}
 

@@ -2596,10 +2596,10 @@ progress@^1.1.8:
   resolved "http://registry.npmjs.org/progress/-/progress-1.1.8.tgz#e260c78f6161cdd9b0e56cc3e0a85de17c7a57be"
   integrity sha1-4mDHj2Fhzdmw5WzD4Khd4Xx6V74=
 
-protobuf2flowtype-typeonly-runtime@1.1.6:
-  version "1.1.6"
-  resolved "https://registry.npmjs.org/protobuf2flowtype-typeonly-runtime/-/protobuf2flowtype-typeonly-runtime-1.1.6.tgz#f6c636273284d52f7cdba750a1eedec14cf28c32"
-  integrity sha512-IwQZsOoeUhkTJ3HT/vbkjR6thYYPiUOLylxH53kLG/k2DqcqiZwjfyUwsgBsCeZsS+PYA6RuLwuaRVmPxzFMsA==
+protobuf2flowtype-typetool-runtime@1.1.9:
+  version "1.1.9"
+  resolved "https://unpm.uberinternal.com/protobuf2flowtype-typetool-runtime/-/protobuf2flowtype-typetool-runtime-1.1.9.tgz#675ab1c829966b4f1cbd41b4a7e751600b537bd9"
+  integrity sha512-EnRHQY9kjPpMawbrUaRW0i+s8fIGk3TQy/xrCJTkNPdfKBonU5vfg5D0CiMRjvYjr1fOsrtRZKArLCLllyd5Iw==
 
 protobufjs@^5.0.3:
   version "5.0.3"
