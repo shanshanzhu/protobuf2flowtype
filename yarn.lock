@@ -2598,7 +2598,7 @@ progress@^1.1.8:
 
 protobuf2flowtype-typeonly-runtime@1.1.6:
   version "1.1.6"
-  resolved "https://unpm.uberinternal.com/protobuf2flowtype-typeonly-runtime/-/protobuf2flowtype-typeonly-runtime-1.1.6.tgz#f6c636273284d52f7cdba750a1eedec14cf28c32"
+  resolved "https://registry.npmjs.org/protobuf2flowtype-typeonly-runtime/-/protobuf2flowtype-typeonly-runtime-1.1.6.tgz#f6c636273284d52f7cdba750a1eedec14cf28c32"
   integrity sha512-IwQZsOoeUhkTJ3HT/vbkjR6thYYPiUOLylxH53kLG/k2DqcqiZwjfyUwsgBsCeZsS+PYA6RuLwuaRVmPxzFMsA==
 
 protobufjs@^5.0.3:
